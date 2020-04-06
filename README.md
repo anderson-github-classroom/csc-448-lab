@@ -16,8 +16,9 @@ This is a blank repo containing information about working on and submitting your
 * When you are done with the lab (or whenever you want), add your changes, commit your changes, and push your changes.
 
 ## Testing your code locally
-* Install pytest
+* Install dependencies
     * ``pip install pytest``
+    * ``pip install joblib``
 * Issue the following command once on your system:
     * ``git clone https://github.com/anderson-github-classroom/csc-448-student ../csc-448-student``
 * Issue this command everytime you want to test. It will try to automatically detect what assignment you are working on.
