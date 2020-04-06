@@ -19,9 +19,10 @@ This is a blank repo containing information about working on and submitting your
 * Install dependencies
     * ``pip install pytest``
     * ``pip install joblib``
+    * ``pip install matplotlib``
 * Issue the following command once on your system:
     * ``git clone https://github.com/anderson-github-classroom/csc-448-student ../csc-448-student``
 * Issue this command everytime you want to test. It will try to automatically detect what assignment you are working on.
-    *  ./run_tests_locally.sh
+    *  ./run_tests_locally.sh or python run_tests_locally.py
 * You can always try to test specific questions using:
     * pytest ../csc-448-student/tests/test_Syllabus.py::test_question_1
