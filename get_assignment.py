@@ -18,6 +18,15 @@ else:
         exit(1)
 
 path = os.getcwd()
+
+# correction in case this is another repo
+last = path.split("-")[-1]
+try:
+    int(last)
+    path = path[:(-len(last)-1)]
+except:
+    pass
+
 identifier = "-".join(path.split("/")[-1].split("-")[:-1])
 print("Identifier:",identifier)
 name = "".join([c[0].upper()+c[1:] for c in identifier.split("-")])
