@@ -36,6 +36,9 @@ subdir = None
 if "lab-" in identifier:
     print("Auto-detected that this is a lab")
     subdir="labs"
+elif "tutorial-" in identifier:
+    print("Auto-detected that this is a tutorial")
+    subdir="tutorials"
 else:
     print("Auto-detected that this is an assignment")
     subdir="assignments"
