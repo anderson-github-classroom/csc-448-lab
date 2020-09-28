@@ -20,14 +20,17 @@ else:
 path = os.getcwd()
 
 # correction in case this is another repo
-last = path.split("-")[-1]
-try:
-    int(last)
-    path = path[:(-len(last)-1)]
-except:
-    pass
+#last = path.split("-")[-1]
+#c = 0
+#finished = False
+#while not finished:
+#    try:
+#        int(last)
+#        path = path[:(-len(last)-1)]
+#    except:
+#        finished = True
 
-identifier = "-".join(path.split("/")[-1].split("-")[:-1])
+identifier = "-".join(path.split("/")[-1].split("-")[:2])
 print("Identifier:",identifier)
 name = "".join([c[0].upper()+c[1:] for c in identifier.split("-")])
 print("Name:",name)
