@@ -32,8 +32,6 @@ path = os.getcwd()
 
 identifier = "-".join(path.split("/")[-1].split("-")[:2])
 print("Identifier:",identifier)
-name = "".join([c[0].upper()+c[1:] for c in identifier.split("-")])
-print("Name:",name)
 
 subdir = None
 if "lab-" in identifier:
@@ -45,6 +43,13 @@ elif "tutorial-" in identifier:
 else:
     print("Auto-detected that this is an assignment")
     subdir="assignments"
+
+if subdir != "assignments":
+    name = "".join([c[0].upper()+c[1:] for c in identifier.split("-")])
+else:
+    name = identifier.split("-")[0]
+    name = name[0].upper()+name[1:]
+print("Name:",name)
 
 if subdir is not None:
     if os.path.isfile("%s.ipynb"%name):
